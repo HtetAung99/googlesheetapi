@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        title Document
+    body
+        form(action="/result" method="post")
+            input(type="text", name="code")
+            input(type="submit", value="Search")
+        if hasData
+            if result
+                span Expire Date for your #[strong #{result.type}]: #[strong #{result.date}]
+            else 
+                span No Data available for your Serial number!
