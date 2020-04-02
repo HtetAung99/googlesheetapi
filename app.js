@@ -33,7 +33,7 @@ let hasData = false;
 const googlesheetAPI = google.sheets({ version: 'v4', auth: client });
 
 let conf = {
-    spreadsheetId: '1arV1jUv2pa09m4P2PFDggL7QQWZCCbghqxqDvyJwHew',
+    spreadsheetId: {YOUR SPREADSHEET ID},
     range: 'Register!A1:G999'
 };
 
@@ -63,6 +63,6 @@ app.post('/result', (req, res) => {
     res.redirect('/');
 });
 
-app.listen(3000, () => {
+app.listen(80, () => {
     console.log("API is listening on port 3000...");
 })
